@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBytes</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+        nav {
+            background: #0056b3;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* IDE Styles */
+        .ide {
+            margin-top: 20px;
+        }
+        .ide textarea {
+            width: 100%;
+            height: 300px;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1rem;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            resize: none;
+            outline: none;
+            overflow: auto;
+        }
+        .ide textarea::placeholder {
+            color: #6a6a6a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to CodeBytes</h1>
+        <p>Your ultimate resource for coding tutorials, tips, and tricks!</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="practice.html">Practice Questions</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About CodeBytes</h2>
+            <p>CodeBytes is a platform designed to help aspiring developers learn to code. Whether you're a beginner or an advanced programmer, we offer something for everyone.</p>
+        </section>
+        <section id="tutorials" class="section">
+            <h2>Popular Tutorials</h2>
+            <p>- HTML Basics: Build your first web page.</p>
+            <p>- CSS Fundamentals: Style your site like a pro.</p>
+            <p>- JavaScript for Beginners: Make your site interactive.</p>
+        </section>
+        <section id="resources" class="section">
+            <h2>Resources</h2>
+            <p>Check out our curated list of tools and websites to enhance your coding journey:</p>
+            <ul>
+                <li>FreeCodeCamp</li>
+                <li>W3Schools</li>
+                <li>GitHub</li>
+                <li>MDN Web Docs</li>
+            </ul>
+        </section>
+        <section id="ide" class="section">
+            <h2>Try Coding in the IDE</h2>
+            <p>Use this simple coding editor to write and view code:</p>
+            <div class="ide">
+                <textarea placeholder="Write your code here..."></textarea>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or suggestions? Reach out to us at <strong>support@codebytes.com</strong>.</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 CodeBytes. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
