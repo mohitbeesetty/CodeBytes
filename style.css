@@ -1,119 +1,315 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #0a0a0a; /* Darker background */
+    color: #e0e0e0; /* Light text color */
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
-header {
-    background-color: #007bff;
+
+.navbar {
+    position: fixed;
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    background-color: #020c1b; /* Keep navbar background as is */
     color: white;
-    padding: 15px 20px;
-    text-align: center;
+    border-radius: 22px;
+    padding: 1rem 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
 }
-header h1 {
-    font-size: 2rem;
+
+.navBar {
+    display: flex;
+    align-items: center;
 }
-nav {
-    background: #0056b3;
-    padding: 10px 0;
-    text-align: center;
+
+.navbar h1 {
+    font-size: 1.2rem;
+    margin-right: 20px;
 }
-nav a {
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
-nav a:hover {
-    text-decoration: underline;
+
+.nav-links a:hover {
+    color: #9f9595; /* Dark red for hover */
 }
+
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
+    width: 100%;
+    padding-top: 80px; /* Add padding to avoid content overlap with fixed navbar */
 }
+
 .section {
+    height: auto; /* Change to auto for better responsiveness */
     margin-bottom: 20px;
-    background: white;
+    background: #1a1a1a; /* Darker section background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
+
+.section:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.section a {
+    color: #c09b9b; /* Dark red for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section a:hover {
+    color: #ff6f61; /* Lighter red for hover */
+}
+
 .section h2 {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #007bff;
+    color: #f40202; /* Dark red for headings */
 }
+
 .section p {
     line-height: 1.6;
+    color: #e0e0e0; /* Light text color */
 }
+
 .section ul {
     list-style: none;
     padding: 0;
 }
+
 .section ul li {
     margin-bottom: 10px;
     padding: 10px;
-    background: #f4f4f9;
-    border: 1px solid #ddd;
+    background: #2c2c2c; /* Darker background for list items */
+    border: 1px solid #444; /* Dark border */
     border-radius: 5px;
-}
-.section ul li:hover {
-    background: #e7f1ff;
-}
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    color: #e0e0e0; /* Light text color */
+    transition: background 0.3s ease;
 }
 
-/* IDE Styles */
-.ide {
-    margin-top: 20px;
+.section ul li:hover {
+    background: #3a3a3a; /* Slightly lighter on hover */
 }
-.ide textarea {
+
+/* Textarea for IDE styling */
+#editor {
     width: 100%;
-    height: 300px;
-    background: #1e1e1e;
-    color: #d4d4d4;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1rem;
+    height: 400px;
     padding: 10px;
-    border: none;
-    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    background-color: #2e2e2e; /* Dark background for editor */
+    color: #f5f5f5; /* Light text color */
+    border: 1px solid #444; /* Dark border */
+    border-radius: 5px;
     resize: none;
     outline: none;
-    overflow: auto;
-}
-.ide textarea::placeholder {
-    color: #6a6a6a;
-}
-.ide {
-    display:flex;
-    justify-content: center;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
 }
 
-.ide textarea{
-    font-family: monospace;
-    font-size: 1rem;
-    margin-inline: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 1px solid;
-    animation: typing 3s steps(22) forwards;
+#editor:focus {
+    border-color: #240000; /* Dark red for focus */
 }
-@keyframes typing{
-    from{
-        width:0;
+
+/* Button styling */
+#runButton {
+    background-color: #3700b3; /* Dark blue for button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#runButton:hover {
+    background-color: #6200ee; /* Lighter blue on hover */
+}
+
+/* Output section */
+#output {
+    background-color: #333; /* Dark background for output */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    background: #020c1b; /* Keep footer background as is */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer .footer-section {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px;
+}
+
+footer .footer-section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #e1d5d5; /* Dark red for headings */
+}
+
+footer .footer-section p,
+footer .footer-section ul {
+    color: #b3b3b3;
+}
+
+footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+footer .footer-section ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-section ul li a:hover {
+    color: #ff6f61; /* Lighter red for hover */
+}
+
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+footer .footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        top: 1rem;
+        font-size: 0.9rem;
     }
-    to{
-        width:100%
+
+    .nav-links {
+        gap: 0.5rem;
     }
+
+    .navbar h1 {
+        font-size: 1rem;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-section {
+        margin-bottom: 30px;
+        min-width: 100%;
+    }
+
+    footer .footer-section h3 {
+        font-size: 1.1rem;
+    }
+
+    footer .footer-section p,
+    footer .footer-section ul li a {
+        font-size: 0.85rem;
+    }
+
+    footer .footer-bottom {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        top: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    footer .footer-section {
+        margin-bottom: 2rem;
+    }
+
+    footer .footer-section h3 {
+        font-size: 1rem;
+    }
+
+    footer .footer-section p,
+    footer .footer-section ul li a {
+        font-size: 0.8rem;
+    }
+}
+
+navBar a {
+    text-decoration: none;
 }
